@@ -22,4 +22,9 @@ func main() {
 
 	fmt.Println(arrayString)
 
+	a := [1]string{"Hello"}
+	b := [1]string{" world"}
+
+	fmt.Println(a[0] + b[0])
+
 }
