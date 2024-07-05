@@ -46,17 +46,30 @@ func main() {
 
 	fmt.Println(slicedArr)
 
-	appending := append(arrayCopy, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
-	//would have assumed to get an error since capacity of arrayCopy is 10 but maybe that isn't how that works
-
+	appending := append(arrayCopy, 6, 7, 8)
 	// c := [5]int{1,2,3,4,5}
 	// appendtest := append(c,1,2,3,4,5,6)
 	// ah it must be a slice.
 
 	c := make([]int, 0)
 	appendtest := append(c, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+	// I think underlying arrays and make / append works like this;
+	// var := make([]int,5) creates an object for an array
+	// var1 :=append(objectvar,ints,ints,ints)
+	// which creates var1 into an array of sorts??
+
 	fmt.Println(appending)
 	fmt.Println(len(appendtest))
 	fmt.Println(appendtest)
+
+	dynamicArr1 := []int{1, 2, 3, 4, 5}
+
+	arrayCopy1 := make([]int, 2)
+
+	copy(arrayCopy1, dynamicArr1)
+	fmt.Println(arrayCopy1)
+	fmt.Println(dynamicArr1)
+
+	//while i don't know if i'll ever use the capacity section of make() understanding what the first value does helps alot
 
 }
