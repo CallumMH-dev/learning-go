@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func main() {
@@ -15,25 +14,25 @@ func main() {
 	fmt.Println("since i don't know how to do switch statements at all i will sub with if statements")
 
 	fmt.Println("enter first number")
-	num1, _ := readLine.ReadString('\n')
-	sum1, _ := strconv.Atoi(num1)
+	sum1, _ := readLine.ReadString('\n')
 
 	fmt.Println("1 add, 2 sub, 3 multi, 4 divi")
 
-	placeholder, _ := readLine.ReadString('\n')
-	operator, _ := strconv.Atoi(placeholder)
+	operator, _ := readLine.ReadString('\n')
 
 	fmt.Println("enter second number")
-	num2, _ := readLine.ReadString('\n')
-	sum2, _ := strconv.Atoi(num2)
+	sum2, _ := readLine.ReadString('\n')
 
-	calculate(&sum1, &sum2, &operator, &output)
+	println("this is sum1", sum1, "this is sum2", sum2, "this is the op", operator)
+
+	//calculate(&sum1, &sum2, &operator, &output)
 
 	fmt.Println(output)
 }
 
 func calculate(sum1 *int, sum2 *int, operator *int, output *int) {
 	fmt.Println("before ifs")
+	fmt.Println(*operator)
 	if *operator == 1 {
 		fmt.Println("inside 1")
 		*output = *sum1 + *sum2
