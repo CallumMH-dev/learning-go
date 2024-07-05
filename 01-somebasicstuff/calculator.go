@@ -37,7 +37,6 @@ func main() {
 }
 
 func calculate(sum1 *int, sum2 *int, operator *int, output *int) {
-	fmt.Println(*operator)
 	if *operator == 1 {
 		*output = *sum1 + *sum2
 	} else {
