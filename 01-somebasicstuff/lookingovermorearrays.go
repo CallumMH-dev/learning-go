@@ -81,4 +81,7 @@ func main() {
 
 	//while i don't know if i'll ever use the capacity section of make(int[],_,_) understanding what the first value does helps alot
 
+	//note to self, i wonder if i can x := []string{} and then append data to it, perhaps make([]string,_,_), however i already see a drawback since the array
+	// will be limited already, but i wonder if an input would be a single array element or multiple. unsure. not going to think too deeply about it.
+
 }
