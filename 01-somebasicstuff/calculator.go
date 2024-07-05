@@ -37,22 +37,17 @@ func main() {
 }
 
 func calculate(sum1 *int, sum2 *int, operator *int, output *int) {
-	fmt.Println("before ifs")
 	fmt.Println(*operator)
 	if *operator == 1 {
-		fmt.Println("inside 1")
 		*output = *sum1 + *sum2
 	} else {
 		if *operator == 2 {
-			fmt.Println("inside 2")
 			*output = *sum1 - *sum2
 		} else {
 			if *operator == 3 {
-				fmt.Println("inside 3")
 				*output = *sum1 * *sum2
 			} else {
 				if *operator == 4 {
-					fmt.Println("inside 4")
 					*output = *sum1 / *sum2
 				}
 			}
