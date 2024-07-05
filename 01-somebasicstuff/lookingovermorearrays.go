@@ -1,3 +1,5 @@
+// the notes in this are just for personal use and rambling and figuring out how things work, this is by no means a tutorial
+
 package main
 
 import (
@@ -26,23 +28,30 @@ func main() {
 	b := [1]string{" world"}
 
 	fmt.Println(a[0] + b[0])
+	//can add arrays
 
 	dynamicArr := []int{1, 2, 3, 4, 5}
+	//unsure if you would call this a dynamic array or not but it feels like one since i'm not manually setting a limit
 
 	arrayCopy := make([]int, 5, 10)
 
 	fmt.Println(arrayCopy)
 
 	copy(arrayCopy, dynamicArr)
+	// talk more about copying down below
 
 	fmt.Println(dynamicArr)
 	fmt.Println(arrayCopy)
 
 	arrayCopy[2] = 99
 
+	//creating copies do not affect the original array
+
 	fmt.Println(dynamicArr)
 	fmt.Println(arrayCopy)
+
 	slicedArr := arrayCopy[0:2]
+	//slices element 0,1
 
 	fmt.Println(slicedArr)
 
@@ -70,6 +79,6 @@ func main() {
 	fmt.Println(arrayCopy1)
 	fmt.Println(dynamicArr1)
 
-	//while i don't know if i'll ever use the capacity section of make() understanding what the first value does helps alot
+	//while i don't know if i'll ever use the capacity section of make(int[],_,_) understanding what the first value does helps alot
 
 }
