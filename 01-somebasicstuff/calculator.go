@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -26,6 +27,9 @@ func main() {
 	println("this is sum1", sum1, "this is sum2", sum2, "this is the op", operator)
 
 	//calculate(&sum1, &sum2, &operator, &output)
+	num1, _ := strconv.Atoi(sum1)
+
+	fmt.Println(num1)
 
 	fmt.Println(output)
 }
